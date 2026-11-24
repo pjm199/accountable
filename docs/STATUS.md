@@ -7,7 +7,8 @@ No application code has been written yet, so there is nothing to run. Once the s
 - **Intent agreed**: `docs/intent.md` covers scope, users, constraints and success criteria, including delete rules, stage probabilities, required fields and the six-column pipeline board.
 - **Design direction chosen**: three mockups of the dashboard and pipeline are in `docs/mockups/`, each with screenshots. **Mockup 2 (top navigation)** is the chosen direction: `docs/mockups/mockup-2-topnav.html`, with `mockup-2-topnav-dashboard.png` and `mockup-2-topnav-pipeline.png`. Mockups 1 and 3 are kept for reference only.
 - **Tech stack updated**: `docs/TECH_STACK.md` now points to the brand skill and Mockup 2 as the design reference, and requires the fonts to be bundled so the app works offline.
-- **Spec finalized**: `docs/spec.md` has the requirements (R1 to R43), the design, the API, the libraries and the test plan. The 11 concerns at the top are settled, each with an accepted decision.
+- **Spec finalized**: `docs/spec.md` has the requirements (R1 to R43), the design, the API, the libraries and the test plan. The concerns at the top are settled, each with an accepted decision; a second review added concerns 12 to 15 and fixed the dashboard layout and follow-ups rule.
+- **Plan written**: `docs/plan.md` has the files that change, eight build phases, the risks and the proof (unit, end-to-end and by-eye checks). Reviewed once against the spec and the intent; not committed yet.
 
 ## Design notes from Mockup 2
 
@@ -18,5 +19,4 @@ No application code has been written yet, so there is nothing to run. Once the s
 
 ## Next
 
-- Write `docs/plan.md` in phases, in a fresh session (the start of the Build phase).
-- Set up the project skeleton from `docs/TECH_STACK.md` and `docs/spec.md`: the root `package.json` with the `dev`, `test` and `seed` scripts, the React and Vite frontend, the FastAPI backend, the SQLite database and the test setup. Waiting for the go-ahead.
+- Build phase 1 of `docs/plan.md` (the skeleton) in a fresh session. Waiting for the go-ahead.
