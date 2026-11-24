@@ -1,6 +1,6 @@
 # Status
 
-No application code has been written yet.
+No application code has been written yet, so there is nothing to run. Once the skeleton exists, this file will say how to start the app.
 
 ## Done
 
@@ -14,6 +14,8 @@ No application code has been written yet.
 - Pipeline: summary figures and a stacked bar of open value by stage above the board. Cards show the deal, organization, contact initials, a probability bar, value and close date. Late cards have a Raspberry tint and a "Late" date.
 - Stage colours: New Sea Green, Qualified Marigold, Proposal Coral, Negotiation Cerulean, Won Midnight, Lost Raspberry.
 
+- **Tech stack updated**: `docs/TECH_STACK.md` now points to the brand skill and Mockup 2 as the design reference, and requires the fonts to be bundled so the app works offline.
+
 ## Next
 
-- Set up the project skeleton from `docs/TECH_STACK.md`.
+- Set up the project skeleton from `docs/TECH_STACK.md`: the root `package.json` with the `dev`, `test` and `seed` scripts, the React and Vite frontend, the FastAPI backend, the SQLite database and the test setup. Waiting for the go-ahead.

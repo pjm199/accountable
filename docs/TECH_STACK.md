@@ -7,6 +7,14 @@ The frontend gets its data from the backend's JSON API. The backend keeps the da
 
 Prefer popular, well-supported libraries to custom code, such as for the data tables, the charts and the drag-and-drop pipeline. Don't hand-roll what a mature library does well.
 
+## Design
+
+The look follows the `brand` skill (`.claude/skills/brand`) and the chosen mockup, `docs/mockups/mockup-2-topnav.html` with its two screenshots. The mockup is a visual reference only: its hand-written SVG charts and `data.js` are not reused, and the real screens use the libraries above.
+
+The app must work with no internet connection, so the brand fonts (Instrument Sans, Instrument Serif and JetBrains Mono) are bundled with the frontend, for example through the `@fontsource` packages, and not loaded from Google Fonts.
+
+## Hosting
+
 For now it runs locally. Later, Supabase will provide sign-in and the database, and the app will be deployed to Render.
 
 Commands are npm scripts in a `package.json` at the repo root, with `frontend/` as an npm workspace, so they work the same on Mac, Linux and Windows:
