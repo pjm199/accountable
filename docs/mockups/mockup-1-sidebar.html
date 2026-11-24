@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accountable – Mockup 1: Sidebar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#073B4C;--bg:#F0F4F5;--green:#06D6A0;--gold:#FFC145;--coral:#F78C6B;--blue:#118AB2;--rasp:#EF476F;--mist:#CDD8DB;--muted:rgba(7,59,76,.64)}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;display:flex;min-height:100vh}
+[hidden]{display:none!important}
+.mono{font-family:'JetBrains Mono',monospace}
+aside{width:232px;background:var(--ink);color:var(--mist);padding:24px 16px;display:flex;flex-direction:column;gap:28px;flex:none}
+.logo{font-size:22px;font-weight:700;color:#fff;padding:0 10px;display:flex;align-items:center;gap:10px}
+.logo i{width:28px;height:28px;border-radius:9px;background:var(--green);display:grid;place-items:center;color:var(--ink);font-style:normal;font-size:16px}
+nav{display:flex;flex-direction:column;gap:4px}
+nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;color:var(--mist);text-decoration:none;font-weight:500}
+nav a.on{background:var(--green);color:var(--ink)}
+nav a:not(.on):hover{background:rgba(255,255,255,.08)}
+.me{margin-top:auto;display:flex;gap:10px;align-items:center;padding:0 10px;font-size:13px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:12px;flex:none}
+main{flex:1;padding:28px 32px 40px;min-width:0}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:16px}
+h1{font-size:28px;font-weight:700}
+.sub{color:var(--muted);margin-top:2px}
+.btn{background:var(--green);color:var(--ink);font-weight:600;border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;display:inline-flex;gap:8px;align-items:center}
+.search{background:#fff;border-radius:10px;padding:10px 14px;display:flex;gap:8px;align-items:center;color:var(--muted);width:240px}
+.row{display:grid;gap:18px;margin-bottom:18px}
+.panel{background:#fff;border-radius:16px;padding:20px 22px}
+.panel h2{font-size:16px;font-weight:600;margin-bottom:2px}
+.panel .hint{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+.kpis{grid-template-columns:repeat(4,1fr)}
+.kpi .l{color:var(--muted);font-size:13px;display:flex;align-items:center;gap:8px}
+.kpi .l b{width:10px;height:10px;border-radius:50%;display:inline-block}
+.kpi .v{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;margin:8px 0 4px;letter-spacing:-.02em}
+.kpi .d{font-size:12.5px;color:var(--muted)}
+.two{grid-template-columns:1fr 1fr}
+.three{grid-template-columns:1.1fr 1fr 1fr}
+.fn-row{margin-bottom:8px}.fn-bar{border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;font-weight:500;min-width:230px}
+.fn-bar b{font-family:'JetBrains Mono',monospace;font-weight:600}
+ul.list{list-style:none;padding:0;display:flex;flex-direction:column;gap:14px}
+ul.list li{display:flex;gap:12px;align-items:flex-start}
+.ic{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex:none}
+.ic.call{background:rgba(17,138,178,.14);color:var(--blue)}.ic.email{background:rgba(247,140,107,.22);color:#B4482A}.ic.note{background:rgba(255,193,69,.28);color:#8A5F00}.ic.stage{background:rgba(6,214,160,.2);color:#037A5B}
+.li-t{line-height:1.35}.li-s{color:var(--muted);font-size:12.5px;margin-top:2px}
+.tag{font-size:12px;font-weight:600;border-radius:99px;padding:3px 10px;white-space:nowrap}
+.tag.over{background:var(--rasp);color:#fff}.tag.soon{background:rgba(255,193,69,.35);color:#7A5400}
+.fu{justify-content:space-between;align-items:center!important}
+/* pipeline */
+.totals{display:flex;gap:14px;margin-bottom:18px}
+.totals .panel{padding:14px 20px}.totals .t-l{color:var(--muted);font-size:12.5px}.totals .t-v{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:600}
+.board{display:grid;grid-template-columns:repeat(6,minmax(160px,1fr));gap:14px;align-items:start;overflow-x:auto;padding-bottom:8px}
+.col{background:rgba(7,59,76,.05);border-radius:16px;padding:10px;min-height:540px}
+.col-h{display:flex;align-items:center;justify-content:space-between;padding:6px 6px 10px}
+.col-n{display:inline-flex;gap:8px;align-items:center;font-weight:600;padding:5px 12px;border-radius:99px}
+.col-c{color:var(--muted);font-size:12px;padding:0 6px 10px;line-height:1.5}
+.card{background:#fff;border-radius:12px;padding:13px 14px;margin-bottom:10px;box-shadow:0 1px 2px rgba(7,59,76,.06)}
+.card .n{font-weight:600;margin-bottom:2px}.card .o{color:var(--muted);font-size:12.5px}
+.card .m{display:flex;justify-content:space-between;align-items:center;margin-top:12px;flex-wrap:wrap;gap:2px 8px}
+.card .val{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:13px}
+.card .dt{font-size:12px;color:var(--muted);white-space:nowrap}
+.card.late{background:#fff;outline:2px solid var(--rasp)}
+.card.drag{transform:rotate(2deg);box-shadow:0 14px 30px rgba(7,59,76,.22)}
+.add{width:100%;border:0;background:transparent;color:var(--muted);font:inherit;padding:8px;border-radius:10px;display:flex;gap:6px;align-items:center;justify-content:center}
+.col.closed .card{opacity:.85}
+</style></head>
+<body>
+<aside>
+  <div class="logo"><i>A</i>Accountable</div>
+  <nav id="nav"></nav>
+  <div class="me"><span class="av">JM</span><span>Your sales<br><span style="opacity:.6">Local workspace</span></span></div>
+</aside>
+<main>
+<section id="dashboard">
+  <div class="top"><div><h1>Dashboard</h1><div class="sub">Tuesday 24 November 2026</div></div><div style="display:flex;gap:12px"><div class="search" id="s1"></div><button class="btn" id="b1"></button></div></div>
+  <div class="row kpis" id="kpis"></div>
+  <div class="row two">
+    <div class="panel"><h2>Revenue won by month</h2><div class="hint">US$ thousands, 2026</div><div id="line"></div></div>
+    <div class="panel"><h2>Deals won by month</h2><div class="hint">Number of deals, 2026</div><div id="bars"></div></div>
+  </div>
+  <div class="row three">
+    <div class="panel"><h2>Sales funnel</h2><div class="hint">Value that has reached each stage</div><div id="funnel"></div></div>
+    <div class="panel"><h2>Recent activity</h2><div class="hint">Latest across all deals</div><ul class="list" id="act"></ul></div>
+    <div class="panel"><h2>Follow-ups</h2><div class="hint">Upcoming and overdue</div><ul class="list" id="fu"></ul></div>
+  </div>
+</section>
+<section id="pipeline" hidden>
+  <div class="top"><div><h1>Pipeline</h1><div class="sub">Drag a card to change its stage</div></div><div style="display:flex;gap:12px"><div class="search" id="s2"></div><button class="btn" id="b2"></button></div></div>
+  <div class="totals" id="totals"></div>
+  <div class="board" id="board"></div>
+</section>
+</main>
+<script src="data.js"></script>
+<script>
+var m=M;
+document.getElementById('nav').innerHTML=[['dashboard','dash','Dashboard'],['x1','org','Organizations'],['x2','contact','Contacts'],['x3','deal','Deals'],['pipeline','pipe','Pipeline']].map(function(n){return '<a href="#'+n[0]+'" data-nav="'+n[0]+'">'+m.icon(n[1])+n[2]+'</a>'}).join('');
+['s1','s2'].forEach(function(id){document.getElementById(id).innerHTML=m.icon('search',16)+'Search'});
+document.getElementById('b1').innerHTML=m.icon('plus',16)+'Add deal';document.getElementById('b2').innerHTML=m.icon('plus',16)+'Add deal';
+var T=m.T;
+document.getElementById('kpis').innerHTML=[
+ ['Revenue won this year',m.moneyK(T.wonYtd),T.wonCount+' deals won',m.C.green],
+ ['Open pipeline',m.moneyK(T.openValue),T.openCount+' open deals',m.C.blue],
+ ['Expected revenue',m.moneyK(T.expected),'Value × probability of close',m.C.gold],
+ ['Running late',T.late+' deals','Past their expected close date',m.C.rasp]
+].map(function(k){return '<div class="panel kpi"><div class="l"><b style="background:'+k[3]+'"></b>'+k[0]+'</div><div class="v">'+k[1]+'</div><div class="d">'+k[2]+'</div></div>'}).join('');
+document.getElementById('line').innerHTML=m.lineChart(m.MONTHS.map(function(x){return x.rev}),m.MONTHS.map(function(x){return x.m}),m.C.green);
+document.getElementById('bars').innerHTML=m.barChart(m.MONTHS.map(function(x){return x.won}),m.MONTHS.map(function(x){return x.m}),m.C.coral,{last:m.C.rasp});
+document.getElementById('funnel').innerHTML=m.funnelHTML(m.funnel());
+document.getElementById('act').innerHTML=m.ACT.slice(0,5).map(function(a){return '<li><span class="ic '+a.type+'">'+m.icon(a.type,16)+'</span><div><div class="li-t">'+a.text+'</div><div class="li-s">'+a.on+' · '+a.when+'</div></div></li>'}).join('');
+document.getElementById('fu').innerHTML=m.FU.slice(0,5).map(function(f){return '<li class="fu"><div><div class="li-t">'+f.text+'</div><div class="li-s">'+f.deal+' · '+f.who+'</div></div><span class="tag '+(f.overdue?'over':'soon')+'">'+(f.overdue?'Overdue ':'')+m.dateLabel(f.due)+'</span></li>'}).join('');
+var to=m.stageTotals;var openAll=m.D.filter(function(d){return d.open});
+document.getElementById('totals').innerHTML=[['Open deals',T.openCount],['Open value',m.money(T.openValue)],['Expected revenue',m.money(T.expected)]].map(function(t){return '<div class="panel"><div class="t-l">'+t[0]+'</div><div class="t-v">'+t[1]+'</div></div>'}).join('');
+document.getElementById('board').innerHTML=m.STAGES.map(function(s){var t=to(s.name);var closed=s.name==='Won'||s.name==='Lost';
+ return '<div class="col'+(closed?' closed':'')+'"><div class="col-h"><span class="col-n" style="background:'+s.color+';color:'+s.text+'">'+s.name+'</span><span class="mono" style="color:var(--muted)">'+t.deals.length+'</span></div><div class="col-c"><span class="mono">'+m.money(t.value)+'</span><br>'+(closed?'Closed':'Expected <span class="mono">'+m.money(t.expected)+'</span>')+'</div>'+
+ t.deals.map(function(d,i){return '<div class="card'+(d.late?' late':'')+((s.name==='Proposal'&&i===0)?' drag':'')+'"><div class="n">'+d.name+'</div><div class="o">'+d.org+'</div><div class="m"><span class="val">'+m.money(d.value)+'</span><span class="dt" '+(d.late?'style="color:var(--rasp);font-weight:600"':'')+'>'+(d.late?'Late · ':'')+m.dateLabel(d.close)+'</span></div></div>'}).join('')+
+ (closed?'':'<button class="add">'+m.icon('plus',14)+'Add deal</button>')+'</div>'}).join('');
+m.fillHash({dashboard:1,pipeline:1});
+</script></body></html>
