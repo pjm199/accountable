@@ -19,6 +19,9 @@ dev = [
 [tool.uv]
 package = false
 
+[tool.vercel]
+entrypoint = "backend/main.py"
+
 [tool.pytest.ini_options]
 testpaths = ["backend/tests"]
 filterwarnings = [

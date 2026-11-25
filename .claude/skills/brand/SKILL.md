@@ -1,10 +1,6 @@
 ---
 name: brand
-<<<<<<< HEAD
-description: Accountable's brand guidelines for fonts, colors, surfaces and tone. Use for any UI work.
-=======
 description: Accountable's fonts, colors and tone. Use for any UI work.
->>>>>>> mvp
 ---
 # Brand
 
