@@ -1,0 +1,17 @@
+{
+  "name": "accountable",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others --names api,web --prefix-colors cyan,green \"uv run uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload --reload-dir backend\" \"npm run dev --workspace frontend -- --open\"",
+    "test": "node scripts/test.mjs",
+    "seed": "uv run python -m backend.seed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "concurrently": "^10.0.7"
+  }
+}

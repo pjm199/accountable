@@ -1,0 +1,107 @@
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 14px;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  border-radius: var(--radius-pill);
+  padding: 9px 16px;
+  width: 320px;
+  color: var(--ink-soft);
+  box-shadow: var(--shadow-soft);
+}
+.search-box input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  flex: 1;
+  min-width: 0;
+  color: var(--ink);
+}
+.search-box:focus-within {
+  outline: 2px solid var(--cerulean);
+  outline-offset: 1px;
+}
+.table-panel {
+  padding: 8px 8px 4px;
+}
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.data-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  padding: 8px 12px;
+}
+.data-table th.right,
+.data-table td.right {
+  text-align: right;
+}
+.data-table th.right .sort-button {
+  margin-left: auto;
+}
+.sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  padding: 4px 6px;
+  margin: 0 -6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: inherit;
+}
+.sort-button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+.sort-idle {
+  opacity: 0.35;
+}
+.data-table td {
+  padding: 11px 12px;
+  vertical-align: middle;
+}
+.data-table tbody tr td {
+  background: var(--panel);
+}
+.data-table tbody tr:not(:last-child) td {
+  box-shadow: inset 0 -1px 0 var(--ink-faint);
+}
+.data-table tbody tr:hover td {
+  background: #f7fafa;
+}
+.data-table tbody tr.row-late td {
+  background: var(--raspberry-tint);
+}
+.data-table tbody tr td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.data-table tbody tr td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.data-table .name-link {
+  font-weight: 600;
+  color: var(--ink);
+}
+.actions-col {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+}
+.no-match {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 28px 12px !important;
+}
