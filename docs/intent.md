@@ -16,16 +16,29 @@ Accountable is a business management system: a sales CRM that will grow into a f
 - **Deals**: the potential sales, with each one's stage, value and close date. Open one to see its details and its timeline. A deal still open after its expected close date stands out, in the table and on its pipeline card.
 - **Pipeline**: the deals as cards on a board, one column per stage. Drag a card to another column to change the deal's stage, or within a column to change its place; a card can be dropped anywhere in a column, and it stays where it was dropped. A new deal can be added straight into a column, at that stage. The board shows the total value and expected revenue of the deals still open, each column shows its own, and the figures change as soon as a card moves.
 
-Every table has a search box, columns you can sort by clicking their headings, a way to add a new record, and edit and delete on each row. That's how we add a new deal, a new lead or a new customer. Deleting asks first, and says what will happen to the records linked to the one being deleted.
+The board has six columns, one for every stage including Won and Lost. Dragging a card to Won or Lost closes the deal; the board's open totals leave out the Won and Lost columns.
 
-From any contact or deal you can log an activity (a note, call or email) and give it a follow-up date. A follow-up shows on the dashboard as a task until it's marked done. Activities can be edited and deleted too. When a deal moves to another stage, including Won or Lost, an entry such as "Moved from Proposal to Negotiation" appears in its timeline and in the dashboard's recent activity by itself.
+Every table has a search box, columns you can sort by clicking their headings, a way to add a new record, and edit and delete on each row. That's how we add a new deal, a new lead or a new customer. Deleting asks first, and says what will happen to the records linked to the one being deleted:
+
+- Deleting an organization keeps its contacts and deals, which are left with no organization (shown as "—") and can be given another one later.
+- Deleting a contact keeps its deals, which are left with no main contact.
+- Deleting a contact or a deal also deletes the activities logged on it.
+
+From any contact or deal you can log an activity (a note, call or email) and give it a follow-up date. A follow-up shows on the dashboard as a task until it's marked done. Activities can be edited and deleted too. An activity logged on a deal also shows in the timeline of the deal's main contact. When a deal moves to another stage, including Won or Lost, an entry such as "Moved from Proposal to Negotiation" appears in its timeline and in the dashboard's recent activity by itself.
 
 ### Four kinds of record
 
 - **Organization**: a company we do business with. Name, website, industry and notes. An organization has many contacts and many deals.
 - **Contact**: a person we deal with. Name, email, phone, job title, the organization they belong to, and a status (lead, qualified or customer). A lead is a contact with the lead status, so there's no separate list of leads.
-- **Deal**: a potential sale. Name, the organization and the main contact it is with, its stage (New, Qualified, Proposal, Negotiation, Won or Lost), its value in US dollars, its probability of close, and its expected or actual close date. Each stage has a usual probability of close, and a deal takes its new stage's probability when it moves; a probability set by hand is kept until the stage changes.
+- **Deal**: a potential sale. Name, the organization and the main contact it is with, its stage (New, Qualified, Proposal, Negotiation, Won or Lost), its value in US dollars, its probability of close, and its expected or actual close date. Each stage has a usual probability of close: New 10%, Qualified 25%, Proposal 50%, Negotiation 75%, Won 100%, Lost 0%. A deal takes its new stage's probability when it moves; a probability set by hand is kept until the stage changes. When a deal moves to Won or Lost, its close date becomes that day, the actual close date, and can still be edited; moving it back to an open stage keeps the date.
 - **Activity**: something that happened, or needs to happen, with a contact or deal. Type (note, call or email), the contact or deal it relates to, a description and when it happened, and optionally a follow-up date and whether it's done.
+
+Only a few fields are required, so records are quick to add. Everything else is optional.
+
+- Organization: name.
+- Contact: name and status.
+- Deal: name, stage and value. The organization and main contact are optional, so a deal can outlive a deleted organization or contact.
+- Activity: type, description, when it happened, and the contact or deal it relates to.
 
 ### Sample data
 
@@ -49,6 +62,8 @@ The look follows Accountable's brand guidelines, which take priority over any ge
 - Not in the MVP: sign-in, user accounts or several users; a dark mode or a layout for phones; AI features; email, calendar or phone integrations; currencies other than US dollars; reports beyond the dashboard; tags or custom fields; changing the pipeline stages; importing or exporting data.
 
 ## Success criteria
+
+The real test is daily use: Accountable replaces the spreadsheets for the salesperson's actual everyday work, not just a demo. The criteria below are what that takes.
 
 1. Someone non-technical can start Accountable with the one documented command, open it in a browser and land on the dashboard, with sample data on every screen.
 2. Organizations, contacts (leads, qualified contacts and customers) and deals can each be added, found by searching, sorted, edited and deleted from their tables, and every change is still there after a refresh and after a restart. Deleting asks first. The reset command brings back the sample data.

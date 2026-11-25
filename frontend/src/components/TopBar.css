@@ -1,0 +1,44 @@
+.topbar {
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 14px 40px;
+  box-shadow: 0 1px 0 rgba(7, 59, 76, 0.03);
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+}
+.wordmark:hover {
+  text-decoration: none;
+}
+.wordmark-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.topnav {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+.topnav-link {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  font-weight: 500;
+}
+.topnav-link:hover {
+  background: var(--bg);
+  text-decoration: none;
+}
+.topnav-link.active {
+  background: var(--ink);
+  color: var(--mist);
+}

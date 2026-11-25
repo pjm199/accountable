@@ -1,0 +1,53 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 59, 76, 0.35);
+  z-index: 40;
+}
+.dialog {
+  position: fixed;
+  z-index: 41;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  background: var(--panel);
+  border-radius: var(--radius-panel);
+  box-shadow: 0 24px 64px rgba(7, 59, 76, 0.25);
+  padding: 22px 24px 24px;
+}
+.dialog:focus {
+  outline: none;
+}
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.dialog-title {
+  font-size: 19px;
+  font-weight: 600;
+}
+.dialog-description {
+  color: var(--ink);
+  margin-bottom: 18px;
+  line-height: 1.55;
+}
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+.form-error {
+  background: var(--raspberry-tint);
+  color: var(--raspberry-text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-top: 14px;
+  font-weight: 500;
+}

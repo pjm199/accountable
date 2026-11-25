@@ -1,0 +1,30 @@
+/* Colour tokens (spec, Design: Look). Fills use the brand colours; the
+   -text shades are for text on light backgrounds (contrast 4.5:1 or more). */
+:root {
+  --bg: #f0f4f5;
+  --panel: #ffffff;
+  --ink: #073b4c;
+  --ink-soft: rgba(7, 59, 76, 0.65);
+  --ink-faint: rgba(7, 59, 76, 0.08);
+  --mist: #cdd8db;
+  --green: #06d6a0;
+  --green-text: #05795b;
+  --marigold: #ffc145;
+  --marigold-text: #8a5f00;
+  --coral: #f78c6b;
+  --cerulean: #118ab2;
+  --cerulean-text: #0b6a8a;
+  --raspberry: #ef476f;
+  --raspberry-text: #c4234f;
+  --raspberry-tint: rgba(239, 71, 111, 0.1);
+
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-panel: 16px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 1px 2px rgba(7, 59, 76, 0.04), 0 4px 16px rgba(7, 59, 76, 0.05);
+  --shadow-lift: 0 16px 34px rgba(7, 59, 76, 0.22);
+}

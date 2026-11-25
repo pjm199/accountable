@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accountable – Mockup 3: Compact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#073B4C;--bg:#F0F4F5;--green:#06D6A0;--gold:#FFC145;--coral:#F78C6B;--blue:#118AB2;--rasp:#EF476F;--muted:rgba(7,59,76,.62)}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:13.5px;display:flex;min-height:100vh}
+[hidden]{display:none!important}.mono{font-family:'JetBrains Mono',monospace}
+.rail{width:76px;background:#fff;display:flex;flex-direction:column;align-items:center;padding:18px 0;gap:8px;flex:none}
+.rail .logo{width:42px;height:42px;border-radius:14px;background:var(--ink);color:var(--green);display:grid;place-items:center;font-weight:700;font-size:20px;margin-bottom:14px}
+.rail a{width:52px;padding:9px 0 6px;border-radius:14px;color:var(--muted);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:500}
+.rail a.on{background:var(--gold);color:var(--ink)}
+main{flex:1;padding:22px 28px 36px;min-width:0}
+.bar{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+h1{font-size:22px;font-weight:700;margin-right:auto}
+.pill{background:#fff;border-radius:12px;padding:8px 14px;display:flex;gap:8px;align-items:center;color:var(--muted);width:230px}
+.btn{background:var(--coral);color:var(--ink);border:0;border-radius:12px;padding:9px 16px;font:inherit;font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.panel{background:#fff;border-radius:14px;padding:16px 18px}
+.panel h2{font-size:14px;font-weight:600;margin-bottom:10px;display:flex;justify-content:space-between}
+.panel h2 span{color:var(--muted);font-weight:400;font-size:12px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.stat .l{color:var(--muted);font-size:12px}.stat .v{font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:600;letter-spacing:-.03em;margin:6px 0 10px}
+.chip{display:inline-block;border-radius:8px;padding:3px 9px;font-size:11.5px;font-weight:600}
+.stackbar{display:flex;height:30px;border-radius:10px;overflow:hidden;gap:3px;margin-bottom:14px}
+.stackbar span{display:grid;place-items:center;font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace}
+table{width:100%;border-collapse:collapse}
+td,th{text-align:left;padding:8px 6px;font-weight:400}
+th{color:var(--muted);font-size:11.5px;font-weight:500}
+tr+tr td{background-image:linear-gradient(rgba(7,59,76,.06),rgba(7,59,76,.06));background-size:100% 1px;background-repeat:no-repeat}
+td.r,th.r{text-align:right}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:8px}
+.fn-row{margin-bottom:6px}.fn-bar{border-radius:8px;padding:7px 12px;display:flex;justify-content:space-between;font-weight:500;min-width:230px}
+.fn-bar b{font-family:'JetBrains Mono',monospace}
+.tl{list-style:none;padding:0;display:flex;flex-direction:column;gap:11px}
+.tl li{display:flex;gap:10px}.tl .ic{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;flex:none;background:var(--bg)}
+.tl .s{color:var(--muted);font-size:12px}
+.tag{font-size:11.5px;font-weight:600;border-radius:8px;padding:2px 8px;white-space:nowrap}
+.tag.over{background:var(--rasp);color:#fff}.tag.soon{background:rgba(255,193,69,.4);color:#7A5400}
+/* pipeline */
+.sumrow{display:flex;gap:28px;align-items:center;margin-bottom:14px;padding:14px 20px}
+.sumrow .l{font-size:12px;color:var(--muted)}.sumrow .v{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:600}
+.board{display:grid;grid-template-columns:repeat(6,minmax(160px,1fr));gap:10px;overflow-x:auto;align-items:start}
+.col{border-radius:14px;padding:10px;min-height:560px}
+.col-h{padding:2px 4px 8px}
+.col-h .n{font-weight:700;font-size:14px;display:flex;justify-content:space-between}
+.col-h .s{font-size:11.5px;margin-top:3px;line-height:1.5;opacity:.8}
+.card{background:#fff;border-radius:10px;padding:10px 11px;margin-bottom:7px;color:var(--ink)}
+.card .n{font-weight:600;font-size:13px;display:flex;justify-content:space-between;gap:6px}
+.card .o{font-size:12px;color:var(--muted);margin:1px 0 8px}
+.card .m{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--muted)}
+.card .m b{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink)}
+.card .alert{display:inline-flex;gap:4px;align-items:center;color:#fff;background:var(--rasp);border-radius:6px;padding:1px 7px;font-weight:600;font-size:11px}
+.card.drag{transform:rotate(2.5deg);box-shadow:0 14px 28px rgba(7,59,76,.25)}
+.ghost{border:2px dashed rgba(7,59,76,.3);border-radius:10px;height:62px;margin-bottom:7px}
+.add{width:100%;border:0;background:rgba(255,255,255,.55);border-radius:10px;padding:7px;color:var(--ink);font:inherit;font-weight:500;display:flex;gap:5px;justify-content:center;align-items:center}
+</style></head>
+<body>
+<div class="rail" id="rail"></div>
+<main>
+<section id="dashboard">
+  <div class="bar"><h1>Dashboard</h1><div class="pill" id="s1"></div><button class="btn" id="b1"></button></div>
+  <div class="bento">
+    <div class="panel stat c3"><div class="l">Revenue won, 2026</div><div class="v" id="k1"></div><span class="chip" style="background:rgba(6,214,160,.25)" id="k1c"></span></div>
+    <div class="panel stat c3"><div class="l">Open pipeline</div><div class="v" id="k2"></div><span class="chip" style="background:rgba(17,138,178,.18)" id="k2c"></span></div>
+    <div class="panel stat c3"><div class="l">Expected revenue</div><div class="v" id="k3"></div><span class="chip" style="background:rgba(255,193,69,.4)">Value × probability</span></div>
+    <div class="panel stat c3"><div class="l">Running late</div><div class="v" id="k4"></div><span class="chip" style="background:var(--rasp);color:#fff">Past close date</span></div>
+
+    <div class="panel c7"><h2>Revenue won by month<span>US$ thousands</span></h2><div id="line"></div></div>
+    <div class="panel c5"><h2>Open pipeline<span>value and expected revenue</span></h2><div class="stackbar" id="stack"></div><table id="ptab"></table></div>
+
+    <div class="panel c4"><h2>Deals won by month<span>count</span></h2><div id="bars"></div></div>
+    <div class="panel c4"><h2>Sales funnel<span>value reaching each stage</span></h2><div id="funnel"></div></div>
+    <div class="panel c4"><h2>Follow-ups<span>upcoming and overdue</span></h2><ul class="tl" id="fu"></ul></div>
+
+    <div class="panel c12" style="grid-column:span 12"><h2>Recent activity<span>latest first</span></h2><ul class="tl" id="act" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px"></ul></div>
+  </div>
+</section>
+<section id="pipeline" hidden>
+  <div class="bar"><h1>Pipeline</h1><div class="pill" id="s2"></div><button class="btn" id="b2"></button></div>
+  <div class="panel sumrow" id="sum"></div>
+  <div class="board" id="board"></div>
+</section>
+</main>
+<script src="data.js"></script>
+<script>
+var m=M,T=m.T;
+document.getElementById('rail').innerHTML='<div class="logo">A</div>'+[['dashboard','dash','Home'],['x1','org','Orgs'],['x2','contact','People'],['x3','deal','Deals'],['pipeline','pipe','Pipeline']].map(function(n){return '<a href="#'+n[0]+'" data-nav="'+n[0]+'">'+m.icon(n[1],20)+n[2]+'</a>'}).join('');
+['s1','s2'].forEach(function(i){document.getElementById(i).innerHTML=m.icon('search',15)+'Search'});['b1','b2'].forEach(function(i){document.getElementById(i).innerHTML=m.icon('plus',15)+'Add deal'});
+k1.textContent=m.moneyK(T.wonYtd);k1c.textContent=T.wonCount+' deals won';k2.textContent=m.moneyK(T.openValue);k2c.textContent=T.openCount+' open deals';k3.textContent=m.moneyK(T.expected);k4.textContent=T.late+' deals';
+line.innerHTML=m.lineChart(m.MONTHS.map(function(x){return x.rev}),m.MONTHS.map(function(x){return x.m}),m.C.coral,{h:220});
+bars.innerHTML=m.barChart(m.MONTHS.map(function(x){return x.won}),m.MONTHS.map(function(x){return x.m}),m.C.blue,{h:210});
+funnel.innerHTML=m.funnelHTML(m.funnel());
+var os=m.STAGES.slice(0,4).map(function(s){var t=m.stageTotals(s.name);return {s:s,t:t}});
+stack.innerHTML=os.map(function(o){return '<span style="background:'+o.s.color+';color:'+o.s.text+';flex:'+o.t.value+'">'+o.t.deals.length+'</span>'}).join('');
+ptab.innerHTML='<tr><th>Stage</th><th class="r">Value</th><th class="r">Expected</th></tr>'+os.map(function(o){return '<tr><td><span class="dot" style="background:'+o.s.color+'"></span>'+o.s.name+'</td><td class="r mono">'+m.money(o.t.value)+'</td><td class="r mono">'+m.money(o.t.expected)+'</td></tr>'}).join('')+'<tr><td><b>Total</b></td><td class="r mono"><b>'+m.money(T.openValue)+'</b></td><td class="r mono"><b>'+m.money(T.expected)+'</b></td></tr>';
+fu.innerHTML=m.FU.slice(0,5).map(function(f){return '<li><span class="ic">'+m.icon(f.overdue?'warn':'call',15)+'</span><div style="flex:1"><div>'+f.text+'</div><div class="s">'+f.deal+'</div></div><span class="tag '+(f.overdue?'over':'soon')+'">'+m.dateLabel(f.due)+'</span></li>'}).join('');
+act.innerHTML=m.ACT.map(function(a){return '<li><span class="ic">'+m.icon(a.type,15)+'</span><div><div>'+a.text+'</div><div class="s">'+a.on+' · '+a.when+'</div></div></li>'}).join('');
+sum.innerHTML=[['Open deals',T.openCount],['Open value',m.money(T.openValue)],['Expected revenue',m.money(T.expected)],['Running late',T.late]].map(function(x){return '<div><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div></div>'}).join('')+'<div style="margin-left:auto;color:var(--muted);max-width:260px">Totals count open deals only. Won and Lost are closed.</div>';
+board.innerHTML=m.STAGES.map(function(s){var t=m.stageTotals(s.name),closed=s.name==='Won'||s.name==='Lost';
+ return '<div class="col" style="background:'+s.color+';color:'+s.text+'"><div class="col-h"><div class="n"><span>'+s.name+'</span><span class="mono">'+t.deals.length+'</span></div><div class="s mono">'+m.money(t.value)+(closed?'':'<br>exp. '+m.money(t.expected))+'</div></div>'+
+ t.deals.map(function(d,i){var drag=(s.name==='Negotiation'&&i===0);return (s.name==='Negotiation'&&i===1?'<div class="ghost"></div>':'')+'<div class="card'+(drag?' drag':'')+'"><div class="n"><span>'+d.name+'</span></div><div class="o">'+d.org+'</div><div class="m"><b>'+m.money(d.value)+'</b>'+(d.late?'<span class="alert">'+m.icon('warn',11)+' Late</span>':'<span>'+m.dateLabel(d.close)+'</span>')+'</div></div>'}).join('')+
+ (closed?'':'<button class="add">'+m.icon('plus',13)+'Add deal</button>')+'</div>'}).join('');
+m.fillHash({dashboard:1,pipeline:1});
+</script></body></html>

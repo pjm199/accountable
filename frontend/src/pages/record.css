@@ -1,0 +1,129 @@
+.record-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.record-kicker {
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.record-kicker a {
+  color: inherit;
+}
+.record-name {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.record-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  margin-top: 16px;
+}
+.fact dt {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+.fact dd {
+  margin: 2px 0 0;
+  font-weight: 500;
+}
+.fact dd.big {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+}
+.record-buttons {
+  display: flex;
+  gap: 8px;
+}
+.record-notes {
+  margin-top: 16px;
+  color: var(--ink);
+  white-space: pre-wrap;
+  max-width: 760px;
+}
+.record-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.record-grid.single {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.linked-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.linked-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+}
+.linked-list li + li {
+  box-shadow: inset 0 1px 0 var(--ink-faint);
+}
+.linked-list .title {
+  font-weight: 600;
+  color: var(--ink);
+}
+.linked-list .sub {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+.linked-list .right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.linked-empty {
+  color: var(--ink-soft);
+  padding: 8px 0;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.probability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.prob-bar {
+  display: inline-block;
+  width: 90px;
+  height: 6px;
+  border-radius: 9px;
+  background: rgba(7, 59, 76, 0.1);
+  overflow: hidden;
+}
+.prob-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 9px;
+}
+.late-text {
+  color: var(--raspberry-text);
+  font-weight: 600;
+}
