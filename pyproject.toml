@@ -20,7 +20,7 @@ dev = [
 package = false
 
 [tool.vercel]
-entrypoint = "backend.server:app"
+entrypoint = "backend.main:app"
 
 [tool.pytest.ini_options]
 testpaths = ["backend/tests"]
